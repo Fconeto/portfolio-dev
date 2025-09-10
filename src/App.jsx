@@ -9,6 +9,7 @@ import { DiRedis } from "react-icons/di";
 
 import InteractiveTitle from "./components/portfolio/InteractiveTitle.jsx";
 import PhysicsAnimation from "./components/portfolio/PhysicsAnimation.jsx";
+import Timeline from "./components/portfolio/Timeline.jsx";
 import SectionIndicator from "./components/portfolio/SectionIndicator.jsx";
 import ThemeToggleButton from "./components/portfolio/ThemeToggleButton.jsx";
 import LanguageToggleButton from "./components/portfolio/LanguageToggleButton.jsx"; // Importe o novo componente
@@ -208,6 +209,10 @@ export default function Portfolio() {
             </div>
           </div>
         </div>
+      </section>
+
+      <section id="timeline" className="min-h-screen flex items-center justify-center relative z-10 py-20">
+        <Timeline title={t.timeline.title} milestones={t.timeline.milestones} />
       </section>
 
       <section id="tech" className="min-h-screen flex items-center justify-center relative z-10 py-20">

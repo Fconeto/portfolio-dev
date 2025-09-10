@@ -4,9 +4,10 @@ export const translations = {
     navSections: [
       { id: 'intro', title: 'Introdução' },
       { id: 'sobre', title: 'Sobre Mim' },
+      { id: 'timeline', title: 'Trajetória' },
       { id: 'tech', title: 'Tecnologias' },
       { id: 'projetos', title: 'Projetos' },
-      { id: 'contato', title: 'Contato' }
+      { id: 'contato', title: 'Contato' },
     ],
     // Intro
     headerName: "Francisco Linhares",
@@ -18,6 +19,20 @@ export const translations = {
     aboutTitle: "Sobre Mim",
     aboutText1: "Sou um desenvolvedor apaixonado por criar soluções digitais inovadoras. Com mais de 2 anos de experiência, especializo-me em desenvolvimento full stack com foco em performance e experiência do usuário.",
     aboutText2: "Minha abordagem combina criatividade, tecnologia e atenção aos detalhes para entregar produtos que realmente fazem a diferença.",
+
+    timeline: {
+      title: "Minha Trajetória",
+      milestones: [
+        { "year": 2016, "text": "Iniciei o curso técnico em Redes de Computadores, tendo meus primeiros contatos formais com lógica de programação e algoritmos." },
+        { "year": 2018, "text": "Dediquei-me a estudos de programação voltados para a área de robótica, desenvolvendo aplicações práticas em projetos escolares." },
+        { "year": 2020, "text": "Iniciei meus estudos em JavaScript, aprofundando conhecimentos em programação web e fundamentos do desenvolvimento frontend moderno." },
+        { "year": 2021, "text": "Concluí um curso de desenvolvedor full stack, com foco nas tecnologias React e Node.js para aplicações completas." },
+        { "year": 2022, "text": "Ingressei na Universidade Federal do Ceará no curso de Sistemas de Informação e iniciei bolsa de pesquisa em Machine Learning." },
+        { "year": 2023, "text": "Finalizei e entreguei o projeto de pesquisa da bolsa e tive minha primeira experiência profissional como analista de suporte técnico." },
+        { "year": 2024, "text": "Atuei pela primeira vez como desenvolvedor de software, aplicando práticas modernas em projetos reais de tecnologia da informação." },
+        { "year": 2025, "text": "Fundação da minha própria software house, iniciando formalmente minha trajetória como desenvolvedor freelancer e empreendedor no setor tecnológico." }
+      ]
+    },
     // Tech
     techTitle: "Tecnologias & Habilidades",
     // Projects
@@ -42,9 +57,10 @@ export const translations = {
     navSections: [
       { id: 'intro', title: 'Introduction' },
       { id: 'sobre', title: 'About Me' },
+      { id: 'timeline', title: 'Journey' },
       { id: 'tech', title: 'Technologies' },
       { id: 'projetos', title: 'Projects' },
-      { id: 'contato', title: 'Contact' }
+      { id: 'contato', title: 'Contact' },
     ],
     // Intro
     headerName: "Francisco Linhares",
@@ -56,6 +72,20 @@ export const translations = {
     aboutTitle: "About Me",
     aboutText1: "I'm a developer passionate about creating innovative digital solutions. With over 2 years of experience, I specialize in full stack development with a focus on performance and user experience.",
     aboutText2: "My approach combines creativity, technology, and attention to detail to deliver products that truly make a difference.",
+
+    timeline: {
+      title: "My Journey",
+      milestones: [
+        { "year": 2016, "text": "I began my technical course in Computer Networks, having my first formal contact with programming logic and algorithms." },
+        { "year": 2018, "text": "I dedicated myself to programming studies focused on robotics, developing practical applications in academic and experimental projects." },
+        { "year": 2020, "text": "I started my studies in JavaScript, deepening knowledge in web development and the fundamentals of modern frontend programming." },
+        { "year": 2021, "text": "I completed a full stack developer course, focusing on React and Node.js technologies for complete web applications." },
+        { "year": 2022, "text": "I enrolled at the Federal University of Ceará in the Information Systems program and started a research scholarship in Machine Learning." },
+        { "year": 2023, "text": "I completed and delivered the scholarship research project and had my first professional experience as a technical support analyst." },
+        { "year": 2024, "text": "I worked for the first time as a software developer, applying modern practices in real information technology projects." },
+        { "year": 2025, "text": "I founded my own software house, formally starting my journey as a freelancer and entrepreneur in the technology sector." }
+      ]
+    },
     // Tech
     techTitle: "Technologies & Skills",
     // Projects
