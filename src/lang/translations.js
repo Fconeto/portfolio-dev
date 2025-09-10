@@ -19,7 +19,7 @@ export const translations = {
     aboutTitle: "Sobre Mim",
     aboutText1: "Sou um desenvolvedor apaixonado por criar soluções digitais inovadoras. Com mais de 2 anos de experiência, especializo-me em desenvolvimento full stack com foco em performance e experiência do usuário.",
     aboutText2: "Minha abordagem combina criatividade, tecnologia e atenção aos detalhes para entregar produtos que realmente fazem a diferença.",
-
+    // Timeline
     timeline: {
       title: "Minha Trajetória",
       milestones: [
@@ -72,7 +72,7 @@ export const translations = {
     aboutTitle: "About Me",
     aboutText1: "I'm a developer passionate about creating innovative digital solutions. With over 2 years of experience, I specialize in full stack development with a focus on performance and user experience.",
     aboutText2: "My approach combines creativity, technology, and attention to detail to deliver products that truly make a difference.",
-
+    // Timeline
     timeline: {
       title: "My Journey",
       milestones: [

@@ -12,13 +12,12 @@ import PhysicsAnimation from "./components/portfolio/PhysicsAnimation.jsx";
 import Timeline from "./components/portfolio/Timeline.jsx";
 import SectionIndicator from "./components/portfolio/SectionIndicator.jsx";
 import ThemeToggleButton from "./components/portfolio/ThemeToggleButton.jsx";
-import LanguageToggleButton from "./components/portfolio/LanguageToggleButton.jsx"; // Importe o novo componente
-import { translations } from "../src/lang/translations.js"; // Importe o arquivo de traduções
+import LanguageToggleButton from "./components/portfolio/LanguageToggleButton.jsx";
+import { translations } from "../src/lang/translations.js";
 import MobileMenu from "./components/portfolio/MobileMenu.jsx";
 import ScrollDownIndicator from "./components/portfolio/ScrollDownIndicator.jsx";
 
 
-// As seções e projetos serão definidos dinamicamente pelo idioma
 const tecnologias = [
     { nome: 'React', Icon: FaReact },
     { nome: 'Node.js', Icon: FaNodeJs },
@@ -45,19 +44,17 @@ const tecnologias = [
 export default function Portfolio() {
   const [currentSection, setCurrentSection] = useState(0);
   const [theme, setTheme] = useState('dark');
-  const [lang, setLang] = useState('pt'); // Estado para o idioma
-  const t = translations[lang]; // Objeto de tradução
+  const [lang, setLang] = useState('pt');
+  const t = translations[lang];
 
   const projectsSectionRef = useRef(null);
   const projectsCarouselRef = useRef(null);
   const [carouselTranslateX, setCarouselTranslateX] = useState(0);
 
-  // Função para alternar o idioma
   const toggleLanguage = () => {
     setLang(prevLang => prevLang === 'pt' ? 'en' : 'pt');
   };
 
-  // Efeito para aplicar variáveis de cor
   useEffect(() => {
     const root = document.documentElement;
     if (theme === 'dark') {
@@ -75,20 +72,17 @@ export default function Portfolio() {
     }
   }, [theme]);
   
-  // Efeito para scroll e indicador de seção
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       const vh = window.innerHeight;
 
-      // Indicador de seção
       const sectionTops = t.navSections.map(s => document.getElementById(s.id)?.offsetTop || 0);
       let currentIdx = sectionTops.findIndex(top => scrollPosition < top - vh / 2);
       if (currentIdx === -1) currentIdx = t.navSections.length - 1;
       else if (currentIdx > 0) currentIdx--;
       setCurrentSection(currentIdx);
 
-      // Scroll do carrossel
       const projectsEl = projectsSectionRef.current;
       const carouselEl = projectsCarouselRef.current;
       if (!projectsEl || !carouselEl) return;
@@ -107,7 +101,6 @@ export default function Portfolio() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Dados de projetos que dependem do idioma
   const projetos = [
     {
       titulo: t.projectXoteCodeTitle,
@@ -123,7 +116,6 @@ export default function Portfolio() {
     },
   ];
 
-  // Calcular altura da seção de projetos
   const projectsSectionHeight = projectsCarouselRef.current ? (projectsCarouselRef.current.scrollWidth - projectsCarouselRef.current.clientWidth + window.innerHeight) : window.innerHeight * 2;
 
 
