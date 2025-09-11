@@ -6,6 +6,8 @@ import { AiOutlineDotNet } from "react-icons/ai";
 import { BiLogoTypescript } from "react-icons/bi";
 import { SiSpringboot, SiMongodb, SiPostgresql, SiMysql, SiRabbitmq, SiKibana } from "react-icons/si";
 import { DiRedis } from "react-icons/di";
+import Eu from "./assets/img/Francisco Linhares fundo transparente.png";
+import XoteCode from "./assets/img/XoteCode image.png"
 
 import InteractiveTitle from "./components/portfolio/InteractiveTitle.jsx";
 import PhysicsAnimation from "./components/portfolio/PhysicsAnimation.jsx";
@@ -105,7 +107,7 @@ export default function Portfolio() {
     {
       titulo: t.projectXoteCodeTitle,
       descricao: t.projectXoteCodeDesc,
-      imagem: 'src/assets/img/XoteCode image.png',
+      imagem: XoteCode,
       link: 'https://xotecode-dev.github.io/xotecode-site/'
     },
     {
@@ -197,7 +199,7 @@ export default function Portfolio() {
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-3xl mx-auto transform rotate-6 hover:rotate-12 transition-transform duration-500  overflow-hidden"
               style={{background: 'linear-gradient(to bottom right, var(--color-accent), var(--color-highlight))'}}
             >
-              <img className="m-auto h-80" src="src/assets/img/Francisco Linhares fundo transparente.png" />
+              <img className="m-auto h-80" src={Eu} />
             </div>
           </div>
         </div>

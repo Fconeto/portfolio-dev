@@ -32,7 +32,7 @@ const ScrollDownIndicator = (currentSection, sections) => {
     >
       <button
         onClick={() => handleClick(sections, currentSection)}
-        className="p-3 bg-[var(--color-accent)] text-white rounded-full shadow-lg animate-bounce"
+        className="p-3 bg-[var(--color-accent)] text-white rounded-full cursor-pointer shadow-lg animate-bounce"
         aria-label="Rolar para baixo"
       >
         <ChevronDown className="w-6 h-6" />
