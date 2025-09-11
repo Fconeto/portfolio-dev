@@ -2,7 +2,7 @@
   "name": "linhares-dev",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://Fconeto.github.io/portfolio-dev",
+  "homepage": "https://Fconeto.github.io/portfolio-dev/",
   "type": "module",
   "scripts": {
     "dev": "vite",
