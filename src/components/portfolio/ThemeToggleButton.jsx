@@ -9,7 +9,7 @@ export default function ThemeToggleButton({ theme, setTheme }) {
   return (
     <button
       onClick={toggleTheme}
-      className="w-8 h-8 rounded-full flex items-center justify-center overflow-hidden bg-[var(--color-highlight)]"
+      className="w-8 h-8 transition-colors duration-300 hover:bg-[var(--color-accent)] rounded-full flex items-center justify-center overflow-hidden bg-[var(--color-text-inverse)]"
       aria-label="Toggle theme"
     >
       <div className={`flex flex-col transition-transform duration-500 ease-in-out ${theme === 'dark' ? '-translate-y-4' : 'translate-y-4'}`}>

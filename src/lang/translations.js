@@ -51,6 +51,16 @@ export const translations = {
     // Contact
     contactTitle: "Vamos Trabalhar Juntos?",
     contactTagline: "Estou sempre aberto a novos projetos e oportunidades. Entre em contato!",
+    form: {
+      nameForm: "Nome",
+      email: "Email",
+      subject: "Assunto",
+      message: "Mensagem",
+      sendButton: "Enviar Mensagem",
+      sendingButton: "Enviando...",
+      successMessage: "Mensagem enviada com sucesso!",
+      errorMessage: "Erro ao enviar a mensagem. Tente novamente mais tarde."
+    }
   },
   en: {
     // Header
@@ -104,5 +114,15 @@ export const translations = {
     // Contact
     contactTitle: "Let's Work Together?",
     contactTagline: "I'm always open to new projects and opportunities. Get in touch!",
+    form: {
+      nameForm: "Name",
+      email: "Email",
+      subject: "Subject",
+      message: "Message",
+      sendButton: "Send Message",
+      sendingButton: "Sending...",
+      successMessage: "Message sent successfully!",
+      errorMessage: "Error sending message. Please try again later."
+    }
   }
 };

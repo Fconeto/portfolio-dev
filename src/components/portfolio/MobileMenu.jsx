@@ -14,7 +14,7 @@ const MobileMenu = ({ sections }) => {
   };
 
   return (
-    <div className="md:hidden">
+    <div className="lg:hidden">
       <button onClick={toggleMenu} aria-label="Abrir menu" className="p-2 transition-transform duration-300">
         <Menu className="w-6 h-6" />
       </button>

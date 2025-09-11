@@ -5,19 +5,17 @@ import InteractiveTitle from './InteractiveTitle.jsx';
 const Timeline = ({ title, milestones }) => {
   return (
     <div className="max-w-4xl mx-auto px-6 py-20">
-      <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
             <InteractiveTitle text={title} />
         </h2>
-      </h2>
-      <div className="relative">
-        <div className="absolute left-3 md:left-1/2 -ml-0.5 w-1 h-full bg-[var(--color-highlight)]"></div>
+      <div className="relative flex flex-col items-center">
+        <div className="absolute md:left-1/2 -ml-0.5 w-1 h-full bg-[var(--color-highlight)]"></div>
 
         {milestones.map((milestone, index) => (
-          <div key={index} className={`mb-8 flex justify-between items-center w-full ${index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
+          <div key={index} className={`mb-8 flex justify-between items-center w-full ${index % 2 === 0 ? 'flex-row-reverse' : 'flex-row'}`}>
             <div className="w-full md:w-1/2"></div>
             
-            <div className="absolute left-0 md:left-1/2 -ml-3 md:-ml-3.5 w-6 h-6 rounded-full bg-[var(--color-accent)] flex items-center justify-center">
+            <div className="absolute left-1/2 invisible md:visible md:-ml-3.5 w-6 h-6 rounded-full bg-[var(--color-accent)] flex items-center justify-center">
               <Dot className="w-4 h-4 text-white" />
             </div>
 

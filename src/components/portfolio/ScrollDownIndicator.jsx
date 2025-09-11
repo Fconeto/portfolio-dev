@@ -18,8 +18,6 @@ const ScrollDownIndicator = (currentSection, sections) => {
   }, []);
 
   const handleClick = (sec, cur) => {
-        console.log('teste', cur.sections,  cur.sections[cur.currentSection].id);
-
         document.getElementById(cur.sections[cur.currentSection + 1].id)
             .scrollIntoView({behavior: 'smooth'});
   };

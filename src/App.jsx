@@ -18,6 +18,7 @@ import LanguageToggleButton from "./components/portfolio/LanguageToggleButton.js
 import { translations } from "../src/lang/translations.js";
 import MobileMenu from "./components/portfolio/MobileMenu.jsx";
 import ScrollDownIndicator from "./components/portfolio/ScrollDownIndicator.jsx";
+import ContactForm from "./components/portfolio/ContactForm.jsx";
 
 
 const tecnologias = [
@@ -137,7 +138,7 @@ export default function Portfolio() {
           <div className="flex justify-between items-center">
             <div className="text-xl font-bold">{t.headerName}</div>
             <div className="flex items-center space-x-8">
-              <div className="hidden md:flex space-x-8">
+              <div className="hidden lg:flex space-x-8">
                 {t.navSections.map((section, index) => (
                   <button
                     key={section.id}
@@ -151,9 +152,8 @@ export default function Portfolio() {
                 ))}
               </div>
               <LanguageToggleButton currentLang={lang} toggleLanguage={toggleLanguage} />
-              <MobileMenu sections={t.navSections} />
               <ThemeToggleButton theme={theme} setTheme={setTheme} />
-              
+              <MobileMenu sections={t.navSections} />              
             </div>
           </div>
         </nav>
@@ -249,15 +249,14 @@ export default function Portfolio() {
                   <img
                     src={projeto.imagem}
                     alt={projeto.titulo}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-60 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-3">{projeto.titulo}</h3>
-                    <p className="opacity-70 mb-4 leading-relaxed h-20">{projeto.descricao}</p>
+                    <p className="opacity-70 mb-4 leading-relaxed h-30 ">{projeto.descricao}</p>
                   </div>
                 </div>
               </a>
-
             ))}
           </div>
         </section>
@@ -271,10 +270,8 @@ export default function Portfolio() {
           <p className="text-xl opacity-80 mb-12 max-w-2xl mx-auto">
             {t.contactTagline}
           </p>
-          <a href="mailto:linharesipuce@gmail.com" className="text-2xl md:text-3xl font-bold text-[var(--color-accent)] hover:opacity-80 transition-opacity duration-300 block mb-12">
-            linharesipuce@gmail.com
-          </a>
-          <div className="flex justify-center space-x-6">
+          <ContactForm />
+          <div className="flex justify-center space-x-6 mt-12">
             <a href="https://github.com/Fconeto" target="_blank" className="w-12 h-12 bg-[var(--color-highlight)] rounded-full flex items-center justify-center hover:bg-[var(--color-accent)] hover:text-white transition-all duration-300 hover:scale-110 transform"><Github className="w-6 h-6" /></a>
             <a href="https://www.linkedin.com/in/francisco-linhares-76344b210/" target="_blank" className="w-12 h-12 bg-[var(--color-highlight)] rounded-full flex items-center justify-center hover:bg-[var(--color-accent)] hover:text-white transition-all duration-300 hover:scale-110 transform"><Linkedin className="w-6 h-6" /></a>
             <a href="mailto:linharesipuce@gmail.com" target="_blank" className="w-12 h-12 bg-[var(--color-highlight)] rounded-full flex items-center justify-center hover:bg-[var(--color-accent)] hover:text-white transition-all duration-300 hover:scale-110 transform"><Mail className="w-6 h-6" /></a>
