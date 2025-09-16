@@ -122,13 +122,15 @@ export default function Portfolio() {
       titulo: t.projectXoteCodeTitle,
       descricao: t.projectXoteCodeDesc,
       imagem: XoteCode,
-      link: 'https://xotecode-dev.github.io/xotecode-site/'
+      link: 'https://xotecode-dev.github.io/xotecode-site/',
+      alt: t.projectXoteCodeAlt
     },
     {
       titulo: t.projectUnifocoTitle,
       descricao: t.projectUnifocoDesc,
       imagem: Unifoco,
-      link: '#'
+      link: '#',
+      alt: t.projectUnifocoAlt
     },
   ];
 
@@ -212,7 +214,7 @@ export default function Portfolio() {
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-3xl mx-auto transform rotate-6 hover:rotate-12 transition-transform duration-500  overflow-hidden"
               style={{background: 'linear-gradient(to bottom right, var(--color-accent), var(--color-highlight))'}}
             >
-              <img className="m-auto h-80" src={Eu} />
+              <img className="m-auto h-80" alt="Foto do Francisco Linhares" src={Eu} />
             </div>
           </div>
         </div>
@@ -299,14 +301,14 @@ export default function Portfolio() {
             style={{ transform: `translateX(${carouselTranslateX}px)` }}
           >
             {projetos.map((projeto, index) => (
-              <a href={projeto.link} target="_blank">
+              <a aria-label={projeto.alt} href={projeto.link} target="_blank">
                 <div
                   key={index}
                   className="w-[320px] md:w-[400px] shadow-2xl flex-shrink-0 bg-[var(--color-background)] bg-opacity-50 backdrop-blur-sm rounded-2xl overflow-hidden hover:scale-105 transition-all duration-500 group"
                 >
                   <img
                     src={projeto.imagem}
-                    alt={projeto.titulo}
+                    alt={projeto.alt}
                     className="w-full h-60 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="p-6">
@@ -330,9 +332,9 @@ export default function Portfolio() {
           </p>
           <ContactForm formTexts={t.form} />
           <div className="flex justify-center space-x-6 mt-12 pb-6">
-            <a href="https://github.com/Fconeto" target="_blank" className="w-12 h-12 bg-[var(--color-highlight)] rounded-full flex items-center justify-center hover:bg-[var(--color-accent)] hover:text-white transition-all duration-300 hover:scale-110 transform"><Github className="w-6 h-6" /></a>
-            <a href="https://www.linkedin.com/in/francisco-linhares-76344b210/" target="_blank" className="w-12 h-12 bg-[var(--color-highlight)] rounded-full flex items-center justify-center hover:bg-[var(--color-accent)] hover:text-white transition-all duration-300 hover:scale-110 transform"><Linkedin className="w-6 h-6" /></a>
-            <a title="linharesipuce@gmail.com" href="mailto:linharesipuce@gmail.com" target="_blank" className="w-12 h-12 bg-[var(--color-highlight)] rounded-full flex items-center justify-center hover:bg-[var(--color-accent)] hover:text-white transition-all duration-300 hover:scale-110 transform"><Mail className="w-6 h-6" /></a>
+            <a aria-label="GitHub de Francisco Linhares" href="https://github.com/Fconeto" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-[var(--color-highlight)] rounded-full flex items-center justify-center hover:bg-[var(--color-accent)] hover:text-white transition-all duration-300 hover:scale-110 transform"><Github className="w-6 h-6" /></a>
+            <a aria-label="LinkedIn de Francisco Linhares" href="https://www.linkedin.com/in/francisco-linhares-76344b210/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-[var(--color-highlight)] rounded-full flex items-center justify-center hover:bg-[var(--color-accent)] hover:text-white transition-all duration-300 hover:scale-110 transform"><Linkedin className="w-6 h-6" /></a>
+            <a aria-label="Enviar e-mail para linharesipuce@gmail.com" href="mailto:linharesipuce@gmail.com" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-[var(--color-highlight)] rounded-full flex items-center justify-center hover:bg-[var(--color-accent)] hover:text-white transition-all duration-300 hover:scale-110 transform"><Mail className="w-6 h-6" /></a>
           </div>
         </div>
       </section>

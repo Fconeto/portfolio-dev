@@ -8,6 +8,7 @@ const physicsAnimationColors = {
 export default function PhysicsAnimation({ theme }) {
   const canvasRef = useRef(null);
   const animationRef = useRef(null);
+  const prevWidthRef = useRef(window.innerWidth);
   
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -16,9 +17,7 @@ export default function PhysicsAnimation({ theme }) {
     const ctx = canvas.getContext('2d');
     let particles = [];
     
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+    const initializeParticles = () => {
       particles = [];
       for (let i = 0; i < 8; i++) {
         particles.push({
@@ -32,7 +31,24 @@ export default function PhysicsAnimation({ theme }) {
         });
       }
     };
-    resizeCanvas();
+    
+    const resizeCanvas = () => {
+      const currentWidth = window.innerWidth;
+      const prevWidth = prevWidthRef.current;
+
+      if (currentWidth !== prevWidth) {
+        canvas.width = currentWidth;
+        canvas.height = window.innerHeight;
+        initializeParticles();
+      }
+      
+      prevWidthRef.current = currentWidth;
+    };
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    initializeParticles();
+    
     window.addEventListener('resize', resizeCanvas);
 
     const animate = () => {
