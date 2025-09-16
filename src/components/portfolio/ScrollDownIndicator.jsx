@@ -7,7 +7,7 @@ const ScrollDownIndicator = (currentSection, sections) => {
   useEffect(() => {
     const handleScroll = () => {
       const isAtBottom =
-        window.innerHeight + window.scrollY >= document.body.offsetHeight - 200;
+        window.innerHeight + window.scrollY >= document.body.offsetHeight - 50;
       setIsVisible(!isAtBottom);
     };
 
