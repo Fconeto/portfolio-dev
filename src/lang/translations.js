@@ -35,10 +35,14 @@ export const translations = {
     },
     // Tech
     techTitle: "Tecnologias & Habilidades",
+    techLanguages: "linguagens",
+    techFrameworks: "frameworks e bibliotecas",
+    techDatabases: "bancos de dados",
+    techOther: "outras tecnologias",
     // Projects
     projectsTitle: "Meus Projetos",
     projectXoteCodeTitle: 'XoteCode Site',
-    projectXoteCodeDesc: 'Trabalhei no desenvolvimento do site oficial da XoteCode, uma empresa na qual eu sou um dos cofundadores.',
+    projectXoteCodeDesc: 'Atuei no desenvolvimento do site oficial da XoteCode, empresa da qual sou cofundador.',
     projectUnifocoTitle: 'Unifoco endemias',
     projectUnifocoDesc: 'Fui o coordenador de arquitetura e desenvolvimento do Unifoco endemias, um sistema voltado ao trabalho dos agentes de combate à endemias.',
     projectAppMobileTitle: 'App Mobile',
@@ -51,7 +55,7 @@ export const translations = {
     // Contact
     contactTitle: "Vamos Trabalhar Juntos?",
     contactTagline: "Estou sempre aberto a novos projetos e oportunidades. Entre em contato!",
-    form: {
+    form: [{
       nameForm: "Nome",
       email: "Email",
       subject: "Assunto",
@@ -60,7 +64,7 @@ export const translations = {
       sendingButton: "Enviando...",
       successMessage: "Mensagem enviada com sucesso!",
       errorMessage: "Erro ao enviar a mensagem. Tente novamente mais tarde."
-    }
+    }]
   },
   en: {
     // Header
@@ -98,10 +102,14 @@ export const translations = {
     },
     // Tech
     techTitle: "Technologies & Skills",
+    techLanguages: "languages",
+    techFrameworks: "frameworks and libraries",
+    techDatabases: "databases",
+    techOther: "other technologies",
     // Projects
     projectsTitle: "My Projects",
     projectXoteCodeTitle: 'XoteCode Website',
-    projectXoteCodeDesc: 'I worked on the development of the official website for XoteCode, a company where I am currently the CTO.',
+    projectXoteCodeDesc: 'I worked on the development of the official website for XoteCode, a company where I am a co-founder.',
     projectUnifocoTitle: 'Unifoco endemias',
     projectUnifocoDesc: 'I was the architecture and development coordinator for Unifoco endemias, a system aimed at the work of endemic disease combat agents.',
     projectAppMobileTitle: 'Mobile App',
@@ -114,7 +122,7 @@ export const translations = {
     // Contact
     contactTitle: "Let's Work Together?",
     contactTagline: "I'm always open to new projects and opportunities. Get in touch!",
-    form: {
+    form: [{
       nameForm: "Name",
       email: "Email",
       subject: "Subject",
@@ -123,6 +131,6 @@ export const translations = {
       sendingButton: "Sending...",
       successMessage: "Message sent successfully!",
       errorMessage: "Error sending message. Please try again later."
-    }
+    }]
   }
 };

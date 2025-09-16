@@ -7,7 +7,7 @@ const ScrollDownIndicator = (currentSection, sections) => {
   useEffect(() => {
     const handleScroll = () => {
       const isAtBottom =
-        window.innerHeight + window.scrollY >= document.body.offsetHeight - 50;
+        window.innerHeight + window.scrollY >= document.body.offsetHeight - 200;
       setIsVisible(!isAtBottom);
     };
 
@@ -18,8 +18,12 @@ const ScrollDownIndicator = (currentSection, sections) => {
   }, []);
 
   const handleClick = (sec, cur) => {
-        document.getElementById(cur.sections[cur.currentSection + 1].id)
-            .scrollIntoView({behavior: 'smooth'});
+    let curSec = cur.currentSection;
+    if (cur.currentSection < cur.sections.length - 1)
+      curSec++;
+
+    document.getElementById(cur.sections[curSec].id)
+      .scrollIntoView({behavior: 'smooth'});
   };
 
   return (

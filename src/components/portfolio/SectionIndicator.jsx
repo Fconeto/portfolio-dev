@@ -11,7 +11,7 @@ export default function SectionIndicator({ currentSection, sections }) {
               behavior: 'smooth'
             });
           }}
-          className={`block w-3 h-3 rounded-full transition-all duration-300 bg-[var(--color-highlight)] hover:bg-[var(--color-accent)] ${
+          className={`block w-3 h-3 rounded-full transition-all duration-300 bg-[var(--color-text-inverse)] hover:bg-[var(--color-accent)] ${
             currentSection === index
               ? 'bg-[var(--color-accent)] scale-125'
               : 'hover:scale-110'

@@ -1,13 +1,15 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect, useRef } from "react";
-import { ChevronRight, Mail, Github, Linkedin, ExternalLink, Code, Database, Server, PenTool, Palette } from "lucide-react";
-import { FaReact, FaNodeJs, FaPython, FaJs, FaCss3Alt, FaJava , FaGitAlt, FaLaravel, FaDocker  } from "react-icons/fa";
+import { ChevronRight, Mail, Github, Linkedin, Database, Palette } from "lucide-react";
+import { FaPhp, FaReact, FaNodeJs, FaPython, FaJs, FaJava , FaGitAlt, FaLaravel, FaDocker  } from "react-icons/fa";
 import { AiOutlineDotNet } from "react-icons/ai";
 import { BiLogoTypescript } from "react-icons/bi";
 import { SiSpringboot, SiMongodb, SiPostgresql, SiMysql, SiRabbitmq, SiKibana } from "react-icons/si";
 import { DiRedis } from "react-icons/di";
+import { TbBrandCSharp } from "react-icons/tb";
 import Eu from "./assets/img/Francisco Linhares fundo transparente.png";
 import XoteCode from "./assets/img/XoteCode image.png"
+import Unifoco from "./assets/img/imagem unifoco.png"
 
 import InteractiveTitle from "./components/portfolio/InteractiveTitle.jsx";
 import PhysicsAnimation from "./components/portfolio/PhysicsAnimation.jsx";
@@ -21,22 +23,33 @@ import ScrollDownIndicator from "./components/portfolio/ScrollDownIndicator.jsx"
 import ContactForm from "./components/portfolio/ContactForm.jsx";
 
 
-const tecnologias = [
-    { nome: 'React', Icon: FaReact },
-    { nome: 'Node.js', Icon: FaNodeJs },
-    { nome: '.NET', Icon: AiOutlineDotNet },
-    { nome: 'Python', Icon: FaPython },
-    { nome: 'UX/UI', Icon: Palette },
+const linguagens = [
     { nome: 'JavaScript', Icon: FaJs },
     { nome: 'TypeScript', Icon: BiLogoTypescript },
     { nome: 'Java', Icon: FaJava },
+    { nome: 'Python', Icon: FaPython },
+    { nome: 'C#', Icon: TbBrandCSharp },
+    { nome: 'PHP', Icon: FaPhp },
+];
+
+const frameworks = [
+    { nome: 'React', Icon: FaReact },
+    { nome: 'Node.js', Icon: FaNodeJs },
+    { nome: '.NET', Icon: AiOutlineDotNet },
     { nome: 'Spring Boot', Icon: SiSpringboot },
     { nome: 'Laravel', Icon: FaLaravel },
+];
+
+const bancos = [
     { nome: 'SQL Server', Icon: Database },
     { nome: 'MongoDB', Icon: SiMongodb },
     { nome: 'Redis', Icon: DiRedis },
     { nome: 'PostgreSQL', Icon: SiPostgresql },
     { nome: 'MySQL', Icon: SiMysql },
+];
+
+const tecnologias = [
+    { nome: 'UX/UI', Icon: Palette },
     { nome: 'RabbitMQ', Icon: SiRabbitmq },
     { nome: 'Kibana', Icon: SiKibana },
     { nome: 'Git', Icon: FaGitAlt },
@@ -114,7 +127,7 @@ export default function Portfolio() {
     {
       titulo: t.projectUnifocoTitle,
       descricao: t.projectUnifocoDesc,
-      imagem: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop',
+      imagem: Unifoco,
       link: '#'
     },
   ];
@@ -135,7 +148,7 @@ export default function Portfolio() {
           }
         `}</style>
         <nav className="container mx-auto px-6 py-4">
-          <div className="flex justify-between items-center">
+          <div className="flex justify-around items-center">
             <div className="text-xl font-bold">{t.headerName}</div>
             <div className="flex items-center space-x-8">
               <div className="hidden lg:flex space-x-8">
@@ -209,11 +222,56 @@ export default function Portfolio() {
         <Timeline title={t.timeline.title} milestones={t.timeline.milestones} />
       </section>
 
-      <section id="tech" className="min-h-screen flex items-center justify-center relative z-10 py-20">
+      <section id="tech" className="min-h-screen flex items-center justify-center relative z-10 py-20 pt-25">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
             <InteractiveTitle text={t.techTitle} />
           </h2>
+          <h3 className="text-xl md:text-2xl font-bold text-center mb-16">
+            <InteractiveTitle text={t.techLanguages} />
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            {linguagens.map(({ nome, Icon }, index) => (
+              <div
+                key={nome}
+                className="bg-[var(--color-highlight)] bg-opacity-50 backdrop-blur-sm rounded-xl p-6 text-center flex flex-col items-center justify-center aspect-square hover:bg-opacity-70 transition-all duration-300 transform hover:-translate-y-2"
+              >
+                <Icon className="w-12 h-12 md:w-16 md:h-16 mb-4 text-[var(--color-accent)]" />
+                <h3 className="text-base md:text-lg font-semibold">{nome}</h3>
+              </div>
+            ))}
+          </div>
+          <h3 className="text-xl md:text-2xl font-bold text-center mb-16 mt-10">
+            <InteractiveTitle text={t.techFrameworks} />
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            {frameworks.map(({ nome, Icon }, index) => (
+              <div
+                key={nome}
+                className="bg-[var(--color-highlight)] bg-opacity-50 backdrop-blur-sm rounded-xl p-6 text-center flex flex-col items-center justify-center aspect-square hover:bg-opacity-70 transition-all duration-300 transform hover:-translate-y-2"
+              >
+                <Icon className="w-12 h-12 md:w-16 md:h-16 mb-4 text-[var(--color-accent)]" />
+                <h3 className="text-base md:text-lg font-semibold">{nome}</h3>
+              </div>
+            ))}
+          </div>
+          <h3 className="text-xl md:text-2xl font-bold text-center mb-16 mt-10">
+            <InteractiveTitle text={t.techDatabases} />
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            {bancos.map(({ nome, Icon }, index) => (
+              <div
+                key={nome}
+                className="bg-[var(--color-highlight)] bg-opacity-50 backdrop-blur-sm rounded-xl p-6 text-center flex flex-col items-center justify-center aspect-square hover:bg-opacity-70 transition-all duration-300 transform hover:-translate-y-2"
+              >
+                <Icon className="w-12 h-12 md:w-16 md:h-16 mb-4 text-[var(--color-accent)]" />
+                <h3 className="text-base md:text-lg font-semibold">{nome}</h3>
+              </div>
+            ))}
+          </div>
+          <h3 className="text-xl md:text-2xl font-bold text-center mb-16 mt-10">
+            <InteractiveTitle text={t.techOther} />
+          </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {tecnologias.map(({ nome, Icon }, index) => (
               <div
@@ -229,7 +287,7 @@ export default function Portfolio() {
       </section>
 
       <div id="projetos-wrapper" ref={projectsSectionRef} style={{ height: projectsSectionHeight }}>
-        <section id="projetos" className="p-20 h-screen sticky top-0 flex flex-col justify-center overflow-hidden z-10">
+        <section id="projetos" className="p-20 h-screen sticky top-0 flex flex-col justify-center overflow-hidden z-10 mb-20">
           <div className="w-full max-w-7xl mx-auto px-6">
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
               <InteractiveTitle text={t.projectsTitle} />
@@ -262,7 +320,7 @@ export default function Portfolio() {
         </section>
       </div>
 
-      <section id="contato" className="h-screen flex items-center justify-center relative z-10">
+      <section id="contato" className="min-h-screen flex items-center justify-center relative z-10">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
             <InteractiveTitle text={t.contactTitle} />
@@ -270,11 +328,11 @@ export default function Portfolio() {
           <p className="text-xl opacity-80 mb-12 max-w-2xl mx-auto">
             {t.contactTagline}
           </p>
-          <ContactForm />
-          <div className="flex justify-center space-x-6 mt-12">
+          <ContactForm formTexts={t.form} />
+          <div className="flex justify-center space-x-6 mt-12 pb-6">
             <a href="https://github.com/Fconeto" target="_blank" className="w-12 h-12 bg-[var(--color-highlight)] rounded-full flex items-center justify-center hover:bg-[var(--color-accent)] hover:text-white transition-all duration-300 hover:scale-110 transform"><Github className="w-6 h-6" /></a>
             <a href="https://www.linkedin.com/in/francisco-linhares-76344b210/" target="_blank" className="w-12 h-12 bg-[var(--color-highlight)] rounded-full flex items-center justify-center hover:bg-[var(--color-accent)] hover:text-white transition-all duration-300 hover:scale-110 transform"><Linkedin className="w-6 h-6" /></a>
-            <a href="mailto:linharesipuce@gmail.com" target="_blank" className="w-12 h-12 bg-[var(--color-highlight)] rounded-full flex items-center justify-center hover:bg-[var(--color-accent)] hover:text-white transition-all duration-300 hover:scale-110 transform"><Mail className="w-6 h-6" /></a>
+            <a title="linharesipuce@gmail.com" href="mailto:linharesipuce@gmail.com" target="_blank" className="w-12 h-12 bg-[var(--color-highlight)] rounded-full flex items-center justify-center hover:bg-[var(--color-accent)] hover:text-white transition-all duration-300 hover:scale-110 transform"><Mail className="w-6 h-6" /></a>
           </div>
         </div>
       </section>
