@@ -122,7 +122,7 @@ export default function Portfolio() {
       titulo: t.projectXoteCodeTitle,
       descricao: t.projectXoteCodeDesc,
       imagem: XoteCode,
-      link: 'https://xotecode-dev.github.io/xotecode-site/',
+      link: 'https://xotecode.com.br/',
       alt: t.projectXoteCodeAlt
     },
     {
