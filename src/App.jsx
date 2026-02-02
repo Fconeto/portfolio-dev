@@ -10,6 +10,8 @@ import { TbBrandCSharp } from "react-icons/tb";
 import Eu from "./assets/img/Francisco Linhares fundo transparente.png";
 import XoteCode from "./assets/img/XoteCode image.png"
 import Unifoco from "./assets/img/imagem unifoco.png"
+import Attos from "./assets/img/attos consultoria.png"
+import PrataLovers from "./assets/img/prata lovers.png"
 
 import InteractiveTitle from "./components/portfolio/InteractiveTitle.jsx";
 import PhysicsAnimation from "./components/portfolio/PhysicsAnimation.jsx";
@@ -63,10 +65,6 @@ export default function Portfolio() {
   const [lang, setLang] = useState('pt');
   const t = translations[lang];
 
-  const projectsSectionRef = useRef(null);
-  const projectsCarouselRef = useRef(null);
-  const [carouselTranslateX, setCarouselTranslateX] = useState(0);
-
   const toggleLanguage = () => {
     setLang(prevLang => prevLang === 'pt' ? 'en' : 'pt');
   };
@@ -98,19 +96,6 @@ export default function Portfolio() {
       if (currentIdx === -1) currentIdx = t.navSections.length - 1;
       else if (currentIdx > 0) currentIdx--;
       setCurrentSection(currentIdx);
-
-      const projectsEl = projectsSectionRef.current;
-      const carouselEl = projectsCarouselRef.current;
-      if (!projectsEl || !carouselEl) return;
-
-      const sectionTop = projectsEl.offsetTop;
-      const sectionHeight = projectsEl.offsetHeight;
-      const scrollableWidth = carouselEl.scrollWidth - carouselEl.clientWidth;
-
-      if (scrollPosition >= sectionTop && scrollPosition <= sectionTop + sectionHeight - vh) {
-        const progress = (scrollPosition - sectionTop) / (sectionHeight - vh);
-        setCarouselTranslateX(-progress * scrollableWidth);
-      }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -132,10 +117,22 @@ export default function Portfolio() {
       link: '#',
       alt: t.projectUnifocoAlt
     },
+    {      
+      titulo: t.projectAttosTitle,
+      descricao: t.projectAttosDesc,
+      imagem: Attos,
+      link: 'https://attosconsultoria.com/',
+      alt: t.projectAttosAlt
+    },
+    {
+      titulo: t.projectPrataLoversTitle,
+      descricao: t.projectPrataLoversDesc,
+      imagem: PrataLovers,
+      link: 'https://pratalovers.com.br/',
+      alt: t.projectPrataLoversAlt
+    },
+    
   ];
-
-  const projectsSectionHeight = projectsCarouselRef.current ? (projectsCarouselRef.current.scrollWidth - projectsCarouselRef.current.clientWidth + window.innerHeight) : window.innerHeight * 2;
-
 
   return (
     <div className="text-[var(--color-text)] transition-colors duration-500" style={{backgroundColor: 'var(--color-background)'}}>
@@ -288,23 +285,28 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <div id="projetos-wrapper" ref={projectsSectionRef} style={{ height: projectsSectionHeight }}>
-        <section id="projetos" className="p-20 h-screen sticky top-0 flex flex-col justify-center overflow-hidden z-10 mb-20">
-          <div className="w-full max-w-7xl mx-auto px-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-              <InteractiveTitle text={t.projectsTitle} />
-            </h2>
-          </div>
-          <div 
-            ref={projectsCarouselRef}
-            className="flex gap-8 items-center px-12"
-            style={{ transform: `translateX(${carouselTranslateX}px)` }}
-          >
+      <div id="projetos-wrapper">
+  <section id="projetos" className="p-20 min-h-screen flex flex-col justify-center overflow-hidden z-10 mb-20">
+    
+    <div className="w-full max-w-7xl mx-auto px-6">
+      <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+        <InteractiveTitle text={t.projectsTitle} />
+      </h2>
+    </div>
+
+    {/* Container do Grid */}
+          <div className="w-full max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
             {projetos.map((projeto, index) => (
-              <a aria-label={projeto.alt} href={projeto.link} target="_blank">
+              <a 
+                key={index} // Key movida para o elemento pai
+                aria-label={projeto.alt} 
+                href={projeto.link} 
+                target="_blank"
+                rel="noopener noreferrer" // Boa prática de segurança
+                className="w-full max-w-[400px] group" // Controla a largura máxima do card aqui
+              >
                 <div
-                  key={index}
-                  className="w-[320px] md:w-[400px] shadow-2xl flex-shrink-0 bg-[var(--color-background)] bg-opacity-50 backdrop-blur-sm rounded-2xl overflow-hidden hover:scale-105 transition-all duration-500 group"
+                  className="w-full h-full shadow-2xl flex-shrink-0 bg-[var(--color-background)] bg-opacity-50 backdrop-blur-sm rounded-2xl overflow-hidden hover:scale-105 transition-all duration-500"
                 >
                   <img
                     src={projeto.imagem}
@@ -313,12 +315,13 @@ export default function Portfolio() {
                   />
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-3">{projeto.titulo}</h3>
-                    <p className="opacity-70 mb-4 leading-relaxed h-30 ">{projeto.descricao}</p>
+                    <p className="opacity-70 mb-4 leading-relaxed h-30">{projeto.descricao}</p>
                   </div>
                 </div>
               </a>
             ))}
           </div>
+          
         </section>
       </div>
 
