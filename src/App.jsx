@@ -286,7 +286,7 @@ export default function Portfolio() {
       </section>
 
       <div id="projetos-wrapper">
-  <section id="projetos" className="p-20 min-h-screen flex flex-col justify-center overflow-hidden z-10 mb-20">
+  <section id="projetos" className="p-10 min-h-screen flex flex-col justify-center overflow-hidden z-10 mb-20">
     
     <div className="w-full max-w-7xl mx-auto px-6">
       <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
