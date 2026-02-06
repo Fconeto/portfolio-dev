@@ -142,7 +142,8 @@ export default function Portfolio() {
       titulo: t.projectUnifocoTitle,
       descricao: t.projectUnifocoDesc,
       imagem: Unifoco,
-      link: "#",
+      link: "",
+      explain: t.projectUnifocoExplain,
       alt: t.projectUnifocoAlt,
     },
     {
@@ -362,13 +363,18 @@ export default function Portfolio() {
 
         <div className="w-full max-w-5xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center z-10">
           {projetos.map((projeto, index) => (
-            <a
+            <button
               key={index}
               aria-label={projeto.alt}
-              href={projeto.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full max-w-[400px] group"
+              onClick={() => {
+                if (projeto.link !== "") {
+                  window.open(projeto.link, "_blank");
+                }
+                else {
+                  alert(projeto.explain);
+                }
+              }}
+              className="w-full max-w-[400px] group cursor-pointer"
             >
               <div className="w-full h-full shadow-2xl flex-shrink-0 bg-[var(--color-background)] bg-opacity-50 backdrop-blur-sm rounded-2xl overflow-hidden hover:scale-105 transition-all duration-500">
                 <img
@@ -383,7 +389,7 @@ export default function Portfolio() {
                   </p>
                 </div>
               </div>
-            </a>
+            </button>
           ))}
         </div>
       </section>
