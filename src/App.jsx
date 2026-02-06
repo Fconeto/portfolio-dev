@@ -360,7 +360,7 @@ export default function Portfolio() {
           </h2>
         </div>
 
-        <div className="w-full max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center z-10">
+        <div className="w-full max-w-5xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center z-10">
           {projetos.map((projeto, index) => (
             <a
               key={index}
