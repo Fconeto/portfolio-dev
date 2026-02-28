@@ -1,32 +1,29 @@
-Se você está lendo este arquivo, deve estar realmente interessado em mergulhar nos detalhes do meu portfólio. Fique à vontade para explorar!
+Se você chegou até aqui, ou está realmente interessado no meu código ou está com tempo de sobra. De qualquer forma, sinta-se à vontade para bisbilhotar.
 
-Sobre o Projeto
-Este é o código-fonte do meu portfólio pessoal, um espaço que criei para mostrar minhas habilidades e projetos de forma interativa e visualmente atraente. O objetivo é proporcionar uma experiência de usuário fluida, com navegação intuitiva, animações e um design que se adapta a qualquer dispositivo.
+Basicamente, este é o código-fonte do meu portfólio. A ideia era criar algo que não fosse apenas um amontoado de links, mas um espaço "visualmente atraente" e funcional o suficiente para que ninguém feche a aba em cinco segundos. Tentei deixar a navegação fluida e o design minimamente decente em qualquer tela.
 
-Tecnologias Utilizadas
-O portfólio foi construído com as seguintes ferramentas e bibliotecas, demonstrando o uso de tecnologias modernas e eficientes para o desenvolvimento frontend:
+Tecnologias
+Escolhi o que há de mais padrão no mercado, porque não pretendo reinventar a roda:
 
-React: A base do projeto, utilizada para construir a interface do usuário com componentes reutilizáveis e uma arquitetura escalável.
+React: Componentes reutilizáveis e aquela estrutura que todo mundo já conhece.
 
-Tailwind CSS: Framework de CSS utilitário que permitiu a criação de um design personalizado de forma rápida e responsiva.
+Tailwind CSS: Eu não gosto de ter que brigar com arquivos CSS gigantes. É prático e funciona.
 
-EmailJS: Serviço que possibilita o envio de e-mails diretamente do frontend, sem a necessidade de um servidor backend.
+EmailJS: Envia e-mails direto do frontend. Eu não vou configurar um servidor só para um formulário de contato.
 
-Vite: Ferramenta de build rápida que otimiza o ambiente de desenvolvimento e a compilação do projeto.
+Vite: Porque ninguém mais tem paciência para a lentidão do Webpack.
 
-Lucide React & React Icons: Bibliotecas de ícones que adicionam elementos visuais limpos e profissionais à interface.
+Lucide & React Icons: Ícones limpos para o site não parecer um deserto de texto.
 
-Funcionalidades
-O portfólio conta com diversas funcionalidades para melhorar a experiência do usuário:
+O que ele faz (além de ocupar espaço no GitHub)
+Responsividade: Funciona no celular, no tablet e no desktop. Sim, eu sei que em 2026 isso é o mínimo.
 
-Design Responsivo: A interface se adapta perfeitamente a telas de desktops, tablets e celulares.
+Tema Claro/Escuro: Um botão para salvar a retina de quem prefere navegar no escuro.
 
-Tema Claro/Escuro: Botão para alternar entre o tema claro e escuro, oferecendo conforto visual em diferentes ambientes de iluminação.
+Multi-idioma: Inglês e Português. Nunca se sabe quando um recrutador gringo vai se perder por aqui.
 
-Multi-idioma: Opção para alternar entre os idiomas português e inglês, tornando o conteúdo acessível a um público mais amplo.
+Animações: As bolinhas no fundo para distrair e para dar a impressão de que o site está vivo.
 
-Animações e Interatividade: Títulos interativos, animações de scroll e um carrossel de projetos que criam uma experiência de navegação dinâmica.
+Minha Trajetória: Uma linha do tempo para provar que eu não comecei a programar ontem.
 
-Seção "Minha Trajetória": Uma linha do tempo visual que apresenta minha evolução profissional e acadêmica ao longo dos anos.
-
-Formulário de Contato: Um formulário funcional que permite o envio de mensagens diretamente para o meu e-mail, facilitando o contato.
+Formulário de Contato: Funciona de verdade. Se quiser testar, manda um oi.
