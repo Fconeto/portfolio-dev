@@ -3,6 +3,7 @@ Se você chegou até aqui, ou está realmente interessado no meu código ou est�
 Basicamente, este é o código-fonte do meu portfólio. A ideia era criar algo que não fosse apenas um amontoado de links, mas um espaço "visualmente atraente" e funcional o suficiente para que ninguém feche a aba em cinco segundos. Tentei deixar a navegação fluida e o design minimamente decente em qualquer tela.
 
 Tecnologias
+
 Escolhi o que há de mais padrão no mercado, porque não pretendo reinventar a roda:
 
 React: Componentes reutilizáveis e aquela estrutura que todo mundo já conhece.
