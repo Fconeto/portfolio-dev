@@ -33,7 +33,8 @@ import { DiRedis } from "react-icons/di";
 import { TbBrandCSharp } from "react-icons/tb";
 import Eu from "./assets/img/Francisco Linhares fundo transparente.png";
 import XoteCode from "./assets/img/XoteCode image.png";
-import Unifoco from "./assets/img/imagem unifoco.png";
+import Unifoco from "./assets/img/imagem Unifoco.png";
+import Sammy from "./assets/img/Sammy.png";
 import Attos from "./assets/img/attos consultoria.png";
 import PrataLovers from "./assets/img/prata lovers.png";
 
@@ -132,19 +133,11 @@ export default function Portfolio() {
 
   const projetos = [
     {
-      titulo: t.projectXoteCodeTitle,
-      descricao: t.projectXoteCodeDesc,
-      imagem: XoteCode,
-      link: "https://xotecode.com.br/",
-      alt: t.projectXoteCodeAlt,
-    },
-    {
-      titulo: t.projectUnifocoTitle,
-      descricao: t.projectUnifocoDesc,
-      imagem: Unifoco,
-      link: "",
-      explain: t.projectUnifocoExplain,
-      alt: t.projectUnifocoAlt,
+      titulo: t.projectSammyTitle,
+      descricao: t.projectSammyDesc,
+      imagem: Sammy,
+      link: "https://sammygelados.com.br/",
+      alt: t.projectSammyAlt,
     },
     {
       titulo: t.projectAttosTitle,
@@ -159,6 +152,14 @@ export default function Portfolio() {
       imagem: PrataLovers,
       link: "https://pratalovers.com.br/",
       alt: t.projectPrataLoversAlt,
+    },
+        {
+      titulo: t.projectUnifocoTitle,
+      descricao: t.projectUnifocoDesc,
+      imagem: Unifoco,
+      link: "",
+      explain: t.projectUnifocoExplain,
+      alt: t.projectUnifocoAlt,
     },
   ];
 
